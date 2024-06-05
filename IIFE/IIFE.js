@@ -1,9 +1,12 @@
 const IIFE = (a, b) => {
-  const first = a;
+  let first = a;
   const second = b;
-  (() => {
-    console.log(first, second);
-  })();
+  console.log(first);
+  ((age) => {
+    console.log(age);
+    first = age;
+    console.log(first);
+  })(20);
 };
 
 IIFE(1, 2);
